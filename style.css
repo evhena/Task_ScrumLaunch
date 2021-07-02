@@ -1,0 +1,52 @@
+body {
+    width: 100%;
+
+}
+
+.header_menu {
+    display: flex;
+}
+
+.header_logo {
+
+}
+
+.section_home {
+
+}
+
+.section_home_title {
+
+}
+
+.section_home_button {
+
+}
+
+.section_about {
+
+}
+
+.section_about_title {
+
+}
+
+.section_about_text_wrapper {
+
+}
+
+.section_about_text {
+
+}
+
+.section_group-therapy {
+
+}
+
+.section_group-therapy_left-side {
+    background-image: url(./images/pic_1.png);
+}
+
+.section_contact-us {
+
+}
