@@ -4,74 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&family=Yeseva+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js"></script>
     <title>Document</title>
 </head>
 <body>
     <header class="header">
-        <ul class="header_menu">
-            <li>
-                <h2 class="header_logo">Wila</h2>
-            </li>
-            <li>
-                <a href="#">about</a>
-            </li>
-            <li>
-                <a href="#">group therapy</a>
-            </li>
-            <li>
-                <a href="#">our programs</a>
-            </li>
-            <li>
-                <a href="#">our founder</a>
-            </li>
-            <li>
-                <a href="#">contact us</a>
-            </li>
-        </ul>
+        <div class="header-wrapper">
+            <h2 class="header_logo">
+                <a href="#">Wila</a>
+            </h2>
+            <ul class="header_menu">
+                <li>
+                    <a class="header_menu_link" href="#section_about">about</a>
+                </li>
+                <li>
+                    <a class="header_menu_link" href="#section_group-therapy">group therapy</a>
+                </li>
+                <li>
+                    <a class="header_menu_link" href="#section_our-programs">our programs</a>
+                </li>
+                <li>
+                    <a class="header_menu_link" href="#section_our-founder">our founder</a>
+                </li>
+                <li>
+                    <a class="header_menu_link" href="#section_contact-us">contact us</a>
+                </li>
+            </ul>
+        </div>
     </header>
     <section class="section_home">
         <h1 class="section_home_title">
             We help people reach their full potential 
         </h1>
         <p class="section_home_text">
-            WILA is at the forefront of a therapy movement, changing the ways people are treated 
+            <span class="uppercase">Wila</span> is at the forefront of a therapy movement, changing the ways people are treated 
             when they need help but are held back by financial, cultural and systemic barriers.
         </p>
-        <button class="section_home_button">
+        <a class="section_home_button">
             Begin therapy
-        </button>
+        </a>
     </section>
-    <section class="section_about">
+    <hr>
+    <section class="section_about" id="section_about">
         <h2 class="section_about_title">
             Tell your story. Change our world.
         </h2>
         <div class="section_about_text_wrapper">
             <p class="section_about_text">
-                At WILA, not only do we provide affordable therapy to the diverse communities of Los 
+                At <span class="uppercase">Wila</span>, not only do we provide affordable therapy to the diverse communities of Los 
                 Angeles, we address community needs through projects that see our clients as whole persons 
                 in society. Our goal is to empower everyday people to tell their story, understand themselves, 
                 and make a difference in their lives and their communities.
             </p>
-            <p class="section_about-text">
+            <p class="section_about_text">
                 Our socially conscious therapists provide low-cost and confidential therapy to individuals, 
                 couples, and families from all walks of life. No insurance? No problem. Our fees operate on 
-                a sliding scale, so reach out today and see if WILA is right for you.
+                a sliding scale, so reach out today and see if <span class="uppercase">Wila</span> is right for you.
             </p>
         </div>
     </section>
-    <section class="section_group-therapy">
-        <div class="section_group-therapy_left-side"></div>
+    <hr>
+    <section class="section_group-therapy" id="section_group-therapy">
+        <div class="section_group-therapy_image">
         </div>
-        <div class="section_group-therapy_right-side">
-            <p class="section_group-therapy_right-side_text">
+        <div class="section_group-therapy_text">
+            <p>
                 Whatever your reason for seeking support, 
                 Group Therapy at Wright Institute Los Angeles can help.
             </p>
         </div>
     </section>
-    <section class="section_our-programs">
+    <hr>
+    <section class="section_our-programs" id="section_our-programs">
         <ul class="section_our-programs_wrapper">
             <li>
                 <h2 class="section_our-programs_title">Individualds</h2>
@@ -103,37 +111,67 @@
             </li>
         </ul>
     </section>
-    <section class="section_our-founder">
-        <h2 class="section_our-founder_title">
-            All people have equal potential if they receive equal opportunities.
-        </h2>
-        <p class="section_our-founde_text">
-            I wanted to train clinical psychologists in a certain way, so they 
-            really understood people and understood the society in which we all 
-            live. I started the Wright Institute! 
-            Hedda Bolgar, the founder
-        </p>
+    <hr>
+    <section class="section_our-founder" id="section_our-founder">
+        <div class="section_our-fouder_right">
+            <h2 class="section_our-founder_title">
+                All people have equal potential if they receive equal opportunities.
+            </h2>
+            <p class="section_our-founde_text">
+                <q>
+                    I wanted to train clinical psychologists in a certain way, so they 
+                    really understood people and understood the society in which we all 
+                    live. I started the Wright Institute!
+                </q> 
+               <cite>Hedda Bolgar, the founder</cite> 
+            </p>
+        </div>
         <figcaption class="section_our-founde_img">
             <img src="./images/pic_2.png" alt="image">
         </figcaption>
     </section>
-    <section class="section_contact-us">
+    <section class="section_contact-us" id="section_contact-us">
         <img src="./images/leaf_orange.png" alt="image">
-        <form action="#" class="section_contact-us_form">
-            <h2 class="section_contact-us_form_title">
+        <form action="#" class="contact-us_form">
+
+            <h2 class="contact-us_form_title">
                 Email us and we’ll call you back.
             </h2>
-            <input type="text">
-            <input type="phone">
-            <select>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-            </select>
-            <input type="button">
+
+            <p class="contact-us_form_name">
+                <label for="full_name" class="label">Name</label>
+                <input type="text" value="Full name" id="full_name" class="input_full_name">
+            </p>
+
+            <p class="contact-us_form_phone">
+                <label for="phone" class="label ">Phone number</label>
+                <input type="phone" value="Best number to reach you directly" id="phone" class="input_phone">
+            </p>
+            
+            <div class="contact-us_form_time">
+                <span class="label">Best time to reach you</span>
+                <p class="checkbox_wrapper">
+                    <input type="checkbox" id="morning" name="morning">
+                    <label for="morning">Morning (9am-noon)</label>
+                </p>
+                <p class="checkbox_wrapper">
+                    <input type="checkbox" id="afternoon" name="afternoon">
+                    <label for="afternoon">Afternoon (noon-5pm)</label> 
+                </p>
+                <p class="checkbox_wrapper">
+                    <input type="checkbox" id="evening" name="evening">
+                    <label for="evening">Evening (5pm-8pm)</label>   
+                </p>
+            </div>
+            
+            <p class="contact-us_form_message">
+                <label for="brief_message" class="label">Brief message</label>
+                <input type="text" id="brief_message" value="Your text here" class="input_message">
+            </p>
+
+            <input type="button" value="Begin therapy" class="contact-us_form_button">
         </form>
     </section>
-    <section></section>
-    <footer></footer>
+    <footer>&#169; All rights reserved.</footer>
 </body>
-</html>
+</html> 

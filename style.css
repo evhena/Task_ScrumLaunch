@@ -1,52 +1,469 @@
-body {
-    width: 100%;
-
+:root {
+    --primary-font: 'Yeseva One', cursive;
+    --secondary-font: 'Noto Sans', sans-serif;
 }
+
+body {
+   /* width: 1440px; */
+    margin: 0 auto;
+    padding: 0;
+    font-size: 18px;
+    font-family: var(--secondary-font);
+    color: #10100F;
+}
+
+ul, li, p, h2 {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #10100F;
+}
+
+hr {
+    height: 2px;
+    background-color: #10100F;
+    margin: 0;
+    border: 0;
+}
+
+.header {
+    background: #EEEEEE;
+    padding: 24px 180px;
+ }
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+ }
 
 .header_menu {
     display: flex;
+    width: 75%;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
 }
 
 .header_logo {
+    font-family: var(--secondary-font);
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 30px;
+}
 
+.header_menu_link {
+    font-weight: 400;
+    font-size: 20px;
+    font-family: var(--primary-font);
+    position: relative;
+}
+
+.header_menu_link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: 100%;
+    left: 0;
+    background: #636C92;
+    transition: transform 0.5s;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+.header_menu_link:hover {
+    color: #636C92;
+}
+
+.header_menu_link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 .section_home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 160px 350px;
+    position: relative;
+}
 
+.section_home::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: -80px;
+    left: -100px;
+    width: 576px;
+    height: 687px;
+    background: url(./images/leaf_yellow.png) no-repeat center;
+    background-size: contain;
+    z-index: -1;
+}
+
+.section_home::before {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -80px;
+    right: -47px;
+    width: 415px;
+    height: 424px;
+    background: url(./images/leaf_blue.png) no-repeat center;
+    background-size: contain;
+    z-index: -1;
 }
 
 .section_home_title {
-
+    text-align: center;
+    font-size: 60px;
+    font-weight: 400;
+    margin: 0 0 46px;
+    font-family: var(--primary-font);
+    line-height: 1.5em;
 }
 
-.section_home_button {
-
+.section_home_text {
+    font-size: 17px;
+    text-align: center;
+    margin: 0 0 60px;
+    line-height: 1.5em;
 }
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.section_home_button,
+.contact-us_form_button {
+    font-family: var(--primary-font);
+    text-transform: capitalize;
+    padding: 20px 50px;
+    cursor: pointer;
+    border: 1px solid #000;
+    border-radius: 100px;
+    font-size: 20px;
+}
+
+.section_home_button:hover,
+.contact-us_form_button:hover {
+    border: 1px solid #636C92;
+    border-radius: 30px;
+    background-color: #636C92;
+    color: #fff;
+}
+
+/*ABOUT*/
 
 .section_about {
-
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 160px 180px;
+    background-color: #EEEEEE;
 }
 
 .section_about_title {
-
+    font-family: var(--primary-font);
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 1.5em;
+    text-align: left;
+    align-self: baseline;
+    width: 45%;
+    margin: 0 0 46px;
 }
 
 .section_about_text_wrapper {
-
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 75%;
 }
 
 .section_about_text {
-
+    width: 45%;
+    line-height: 1.5em;
+    margin: 0;
 }
+
+/*GROUP THERAPY*/
 
 .section_group-therapy {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: #EEEEEE;
+}
+
+.section_group-therapy_image {
+    width: 612px;
+    height: 612px;
+    background: url(./images/pic_1.png) no-repeat;
+}
+
+.section_group-therapy_text {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    font-family: var(--primary-font);
+    font-size: 42px;
+    line-height: 1.5em;
+}
+
+.section_group-therapy_text p {
+    width: 58%;
+    text-align: left;
+}
+
+/*OUR PROGRAMS*/
+
+.section_our-programs {
+    background-color: #636C92;
+    padding: 120px 180px;
+}
+
+.section_our-programs_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.section_our-programs_wrapper li {
+    display: inline-block;
+    width: 20%;
+}
+
+.section_our-programs_title {
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.section_our-programs_text {
+    font-weight: 300;
+    color: #EEEEEE;
+    line-height: 1.5em;
+}
+
+/*OUR FOUDER*/
+
+.section_our-founder {
+    display: flex;
+    padding: 120px 120px 120px 180px;
+    flex-direction: row;
+    background: #272624;
+    align-items: center;
+}
+
+.section_our-fouder_right {
+    padding-right: 196px;
 
 }
 
-.section_group-therapy_left-side {
-    background-image: url(./images/pic_1.png);
+.section_our-founder_title {
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 1.4em;
+    color: #fff;
+    margin: 0 0 46px;
 }
+
+.section_our-founde_text {
+    width: 70%;
+    font-weight: 300;
+    color: #EEEEEE;
+    line-height: 1.7em;
+}
+
+cite {
+    font-style: normal;
+}
+
+.section_our-founde_img {
+    background:#272624;
+}
+
+/*CONTACT US*/
 
 .section_contact-us {
-
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 180px 120px 0;
+    background-color: #EEEEEE;
 }
+
+.contact-us_form {
+    width: 55%;
+    display: grid;
+    grid-column-gap: 10%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, minmax(50px, auto));
+    grid-template-areas: "title title"
+                         "name phone"
+                         "time message"
+                         "button none";
+}
+
+.contact-us_form_title {
+    grid-area: title;
+    font-family: var(--primary-font);
+    width: 80%;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 1.4em;
+    margin: 0 0 46px;
+}
+
+.contact-us_form .label {
+    display: block;
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-size: 20px; 
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contact-us_form_name {
+    grid-area: name;
+    display: flex;
+    flex-direction: column;
+        
+}
+
+.input_full_name,
+.input_phone,
+.input_message {
+    border: 0;
+    border-bottom: 1px solid #10100F;
+    padding-bottom: 8px;
+    background-color: #EEEEEE;
+    color: #1D1D1B;
+    opacity: 0.5;
+    font-size: 16px;
+    line-height: 1.5em;
+    cursor: pointer;
+}
+
+.input_message {
+    padding-bottom: 100px;
+    width: 100%;
+}
+
+.contact-us_form_phone {
+    grid-area: phone;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 38px;
+}
+
+.contact-us_form_message {
+    grid-area: message;
+    margin-bottom: 62px;
+}
+
+.contact-us_form_time {
+    grid-area: time;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 62px;
+}
+
+.checkbox_wrapper {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.contact-us_form_time .checkbox_wrapper:last-child {
+    margin: 0;
+}
+
+input[type="checkbox"]:checked, 
+input[type="checkbox"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+input[type="checkbox"]:checked + label, 
+input[type="checkbox"]:not(:checked) + label {
+    display: inline-block;
+    position: relative;
+    padding-left: 28px;
+    line-height: 22px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label:before, 
+input[type="checkbox"]:not(:checked) + label:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #10100F;
+    background-color: #EEEEEE;
+    border-radius: 5px;
+}
+
+input[type="checkbox"]:checked + label:after, 
+input[type="checkbox"]:not(:checked) + label:after {
+    content: "";
+    position: absolute;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    left: 4px;
+    top: 4px;
+    width: 10px;
+    height: 5px;
+    border-radius: 1px;
+    border-left: 4px solid #636C92;
+    border-bottom: 4px solid #636C92;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+input[type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+}
+
+.contact-us_form_button {
+    grid-area: button;
+    max-width: 247px;
+}
+
+
+/*FOOTER*/
+
+footer {
+    display: flex;
+    justify-content: center;
+    background: #A6A6A6;
+    color: #1D1D1B;
+    padding: 30px 0;
+    font-size: 16px;
+    font-weight: 300;
+}
+
