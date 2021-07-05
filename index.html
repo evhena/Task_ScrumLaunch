@@ -13,10 +13,14 @@
 </head>
 <body>
     <header class="header">
-        <div class="header-wrapper">
+       
             <h2 class="header_logo">
                 <a href="#">Wila</a>
             </h2>
+            
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+
             <ul class="header_menu">
                 <li>
                     <a class="header_menu_link" href="#section_about">about</a>
@@ -34,8 +38,8 @@
                     <a class="header_menu_link" href="#section_contact-us">contact us</a>
                 </li>
             </ul>
-        </div>
     </header>
+    
     <section class="section_home">
         <h1 class="section_home_title">
             We help people reach their full potential 
@@ -126,12 +130,12 @@
                <cite>Hedda Bolgar, the founder</cite> 
             </p>
         </div>
-        <figcaption class="section_our-founde_img">
-            <img src="./images/pic_2.png" alt="image">
-        </figcaption>
+        
+        <div class="section_our-founde_img">
+        </div>
     </section>
     <section class="section_contact-us" id="section_contact-us">
-        <img src="./images/leaf_orange.png" alt="image">
+        <img src="./images/leaf_orange.png" alt="image" class="section_contact-us_img">
         <form action="#" class="contact-us_form">
 
             <h2 class="contact-us_form_title">
@@ -151,15 +155,15 @@
             <div class="contact-us_form_time">
                 <span class="label">Best time to reach you</span>
                 <p class="checkbox_wrapper">
-                    <input type="checkbox" id="morning" name="morning">
+                    <input type="checkbox" id="morning" name="morning" class="form_time_checkbox">
                     <label for="morning">Morning (9am-noon)</label>
                 </p>
                 <p class="checkbox_wrapper">
-                    <input type="checkbox" id="afternoon" name="afternoon">
+                    <input type="checkbox" id="afternoon" name="afternoon" class="form_time_checkbox">
                     <label for="afternoon">Afternoon (noon-5pm)</label> 
                 </p>
                 <p class="checkbox_wrapper">
-                    <input type="checkbox" id="evening" name="evening">
+                    <input type="checkbox" id="evening" name="evening" class="form_time_checkbox">
                     <label for="evening">Evening (5pm-8pm)</label>   
                 </p>
             </div>
@@ -172,6 +176,8 @@
             <input type="button" value="Begin therapy" class="contact-us_form_button">
         </form>
     </section>
-    <footer>&#169; All rights reserved.</footer>
+    <footer>
+        &#169; All rights reserved.
+    </footer>
 </body>
 </html> 

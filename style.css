@@ -33,12 +33,13 @@ hr {
 .header {
     background: #EEEEEE;
     padding: 24px 180px;
- }
-
-.header-wrapper {
     display: flex;
     justify-content: space-between;
- }
+}
+
+.header_menu {
+    overflow: hidden;
+}
 
 .header_menu {
     display: flex;
@@ -56,6 +57,8 @@ hr {
 }
 
 .header_menu_link {
+    display: block;
+    box-sizing: border-box;
     font-weight: 400;
     font-size: 20px;
     font-family: var(--primary-font);
@@ -84,6 +87,8 @@ hr {
     transform-origin: left;
 }
 
+/*HOME*/
+
 .section_home {
     display: flex;
     flex-direction: column;
@@ -111,7 +116,7 @@ hr {
     position: absolute;
     display: block;
     bottom: -80px;
-    right: -47px;
+    right: 0px;
     width: 415px;
     height: 424px;
     background: url(./images/leaf_blue.png) no-repeat center;
@@ -263,11 +268,11 @@ hr {
     flex-direction: row;
     background: #272624;
     align-items: center;
+    justify-content: space-between;
 }
 
-.section_our-fouder_right {
-    padding-right: 196px;
-
+.section_our-fouder_right { 
+    width: 50%;
 }
 
 .section_our-founder_title {
@@ -280,7 +285,7 @@ hr {
 }
 
 .section_our-founde_text {
-    width: 70%;
+    width: 60%;
     font-weight: 300;
     color: #EEEEEE;
     line-height: 1.7em;
@@ -291,8 +296,10 @@ cite {
 }
 
 .section_our-founde_img {
-    background:#272624;
-}
+    width: 418px;
+    height: 610px;
+    background: url(./images/pic_2.png) no-repeat;
+}   
 
 /*CONTACT US*/
 
@@ -391,14 +398,14 @@ cite {
     margin: 0;
 }
 
-input[type="checkbox"]:checked, 
-input[type="checkbox"]:not(:checked) {
+.checkbox_wrapper > input[type="checkbox"]:checked, 
+.checkbox_wrapper > input[type="checkbox"]:not(:checked) {
     position: absolute;
     left: -9999px;
 }
 
-input[type="checkbox"]:checked + label, 
-input[type="checkbox"]:not(:checked) + label {
+.form_time_checkbox:checked + label, 
+.form_time_checkbox:not(:checked) + label {
     display: inline-block;
     position: relative;
     padding-left: 28px;
@@ -406,8 +413,8 @@ input[type="checkbox"]:not(:checked) + label {
     cursor: pointer;
 }
 
-input[type="checkbox"]:checked + label:before, 
-input[type="checkbox"]:not(:checked) + label:before {
+.form_time_checkbox:checked + label:before, 
+.form_time_checkbox:not(:checked) + label:before {
     content: "";
     position: absolute;
     left: 0px;
@@ -419,8 +426,8 @@ input[type="checkbox"]:not(:checked) + label:before {
     border-radius: 5px;
 }
 
-input[type="checkbox"]:checked + label:after, 
-input[type="checkbox"]:not(:checked) + label:after {
+.form_time_checkbox:checked + label:after, 
+.form_time_checkbox:not(:checked) + label:after {
     content: "";
     position: absolute;
     -webkit-transition: all 0.2s ease;
@@ -441,11 +448,11 @@ input[type="checkbox"]:not(:checked) + label:after {
     transform: rotate(-45deg);
 }
 
-input[type="checkbox"]:not(:checked) + label:after {
+.form_time_checkbox:not(:checked) + label:after {
     opacity: 0;
 }
 
-input[type="checkbox"]:checked + label:after {
+.form_time_checkbox:checked + label:after {
     opacity: 1;
 }
 
@@ -467,3 +474,190 @@ footer {
     font-weight: 300;
 }
 
+/*burger*/
+
+.header_menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+.menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+  
+.menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.menu-icon .navicon:before,
+.menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+  
+.header .menu-icon .navicon:before {
+	top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+	top: -5px;
+}
+
+.header .menu-btn {
+	display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+	max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+	background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+	transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+	transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before, .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+	top: 0;
+}
+  
+@media only screen and (min-width: 750px) {
+    .header li {
+        float: left;
+    }
+    .header li a {
+        padding: 20px 30px;
+    }
+    .header .header_menu {
+        clear: none;
+        /*float: right;*/
+        max-height: none;
+    }
+    .header .menu-icon {
+        display: none;
+    }
+}
+    
+@media only screen and (max-width: 750px) {
+    .header li a {
+        background-color: Silver;
+        opacity: 0.9;
+    }
+
+    .header ul li {
+        border-bottom: 1px solid #000000;
+        color: #000;
+    }
+
+    .header ul li:first-child {
+        border-top: 0px solid #000000;
+    }
+
+    .header ul {
+        width: 100%;
+    }
+
+    .section_home, 
+    .section_about,
+    .section_group-therapy,
+    .section_our-programs,
+    .section_our-founder,
+    .section_contact-us {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .section_home {
+        width: 100%;
+    }
+
+    .section_home::after {  
+        display: none; 
+        top: -80px;
+        left: -100px;
+        width: 576px;
+        height: 687px;
+    }
+    
+    .section_home::before {
+        display: none; 
+        bottom: -80px;
+        right: 0px;
+        width: 415px;
+        height: 424px;
+    }
+
+    .section_our-programs_wrapper {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .section_group-therapy_image {
+        width: 286px;
+        height: 286px;
+        background-size:contain;
+    }
+
+    .section_our-founde_img {
+        width: 286px;
+        height: 286px;
+        background-size:contain;
+    }
+
+    .section_contact-us_img {
+        display: none;
+    }
+
+    .contact-us_form {
+        width: 100%;
+        display: grid;
+        grid-column-gap: 10%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, minmax(50px, auto));
+        grid-template-areas: "title"
+                             "name" 
+                             "phone"
+                             "time"
+                             "message"
+                             "button";
+    }
+    
+} 
+
+
+  
+  
+
+  
+ 
+  
+
+
+
+
+  
+
+
+  
