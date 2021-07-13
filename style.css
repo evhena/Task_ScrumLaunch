@@ -4,7 +4,6 @@
 }
 
 body {
-   /* width: 1440px; */
     margin: 0 auto;
     padding: 0;
     font-size: 18px;
@@ -46,16 +45,16 @@ hr {
     align-items: center;
     text-transform: capitalize;
     float: left; 
-	max-width: 1200px;
+    max-width: 1200px;
     margin: 0;
 	padding: 0;
     clear: both;
-	max-height: 0;
-	transition: max-height .2s ease-out;
+    max-height: 0;
+    transition: max-height .2s ease-out;
 }
 
 .header ul li {
-	position: relative; 
+    position: relative; 
 }
 
 .header_logo {
@@ -76,7 +75,7 @@ hr {
     display: block;
     box-sizing: border-box;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
     font-family: var(--primary-font);
     position: relative;
     color: #000000;
@@ -494,12 +493,11 @@ cite {
 /*Mobile MENU*/
 
 .header .menu-icon {
-	cursor: pointer;
-	display: inline-block;
-	float: right;
-	padding: 28px 20px;
-	position: absolute;
-	user-select: none;
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: absolute;
+    user-select: none;
     top: 22px;
     right: 0;
     z-index: 100;
@@ -542,29 +540,39 @@ cite {
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon {
-	background: transparent;
+    background: transparent;
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon:before {
-	transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon:after {
-	transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 .header .menu-btn:checked ~ .menu-icon:not(.selector) .navicon:before,
 .header .menu-btn:checked ~ .menu-icon:not(.selector) .navicon:after {
-	top: 0;
+    top: 0;
 }
-  
-@media only screen and (min-width: 750px) and ( max-width: 1024px) {
+
+@media only screen and (min-width: 750px) {
     .header .menu-icon {
         display: none;
     }
-
+}
+  
+@media only screen and (min-width: 750px) and ( max-width: 1024px) {
     .header {
         padding: 24px 50px;
+    }
+
+    .header .menu{
+        width: 88%;
+    }
+
+    .header_menu_link {
+        font-size: 16px;
     }
 
     .section_home,
@@ -592,7 +600,6 @@ cite {
         width: auto;
         margin-bottom: 50px;
     }
-
 }
     
 @media only screen and (max-width: 750px) {
@@ -637,11 +644,9 @@ cite {
     }
 
     .header_menu_link:hover {
-       color: #2B52D1;
+        color: #2B52D1;
     }
 
-    
-    
     .section_home, 
     .section_about,
     .section_group-therapy,
