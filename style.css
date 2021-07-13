@@ -498,9 +498,11 @@ cite {
 	display: inline-block;
 	float: right;
 	padding: 28px 20px;
-	position: relative;
+	position: absolute;
 	user-select: none;
-    top: -100px;
+    top: 22px;
+    right: 0;
+    z-index: 100;
 }
   
 .menu-icon .navicon {
@@ -551,7 +553,8 @@ cite {
 	transform: rotate(45deg);
 }
 
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before, .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+.header .menu-btn:checked ~ .menu-icon:not(.selector) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.selector) .navicon:after {
 	top: 0;
 }
   
@@ -594,26 +597,32 @@ cite {
     
 @media only screen and (max-width: 750px) {
     .header .menu-btn:checked ~ .menu {
-        min-height: 80vh;
+        min-height: 82vh;
     }
 
     .header {
-        padding: 50px 0 0;
+        padding: 0 0;
         display: block;
         text-align: center;
-        background: none;
+        background: transparent;
+        width: 100%;
+        z-index: 0;
     }
 
     .header_logo {
-        width: 100%;
-        display: block;
-        margin-bottom: 50px;
+        display: inline-block;
+        position: absolute;
+        top: 30px;
+        left: 150px;
+        z-index: 10;
     }
 
     .menu {
         width: 100%;
+        height: 100vh;
         display: block;
         z-index: 2;
+        padding-top: 150px;
     }
 
     .header_menu_link {
@@ -623,6 +632,10 @@ cite {
         font-size: 28px;
     }
     
+    .header_menu_link::after {
+        display: none;
+    }
+
     .header_menu_link:hover {
        color: #2B52D1;
     }
@@ -640,6 +653,7 @@ cite {
     }
 
     .section_home {
+        padding-top: 50px;
         justify-content: space-between;
     }
 
@@ -659,7 +673,7 @@ cite {
     }
 
     .section_home::before {
-        top: -200px;
+        top: -160px;
         width: 360px;
         height: 360px;
         z-index: -1;
@@ -667,24 +681,11 @@ cite {
 
     .section_home::after { 
         transform: rotate(-10deg); 
-        bottom: -36px;
+        bottom: 0;
         left: auto;
         right: 20px;
-        width: 198px;
+        width: 176px;
         height: 244px;
-    }
-    
-    
-    .section_home::after { 
-        content: "";
-        display: block;
-        bottom: 0px;
-        left: 0;
-        background: #000;
-        width: 60px;
-        height: 2px;
-        transform: rotate(90deg);
-        position: sticky;
     }
 
     .section_about_title {
