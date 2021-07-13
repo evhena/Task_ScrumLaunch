@@ -41,7 +41,7 @@ hr {
 
 .menu {
     display: flex;
-    width: 75%;
+    width: 72%;
     justify-content: space-between;
     align-items: center;
     text-transform: capitalize;
@@ -65,6 +65,13 @@ hr {
     font-size: 30px;
 }
 
+.header_logo a:hover {
+    color: #DFA04F;
+    cursor: pointer;
+    transition: transform 0.5s;
+    transform: scaleX(0);
+}
+
 .header_menu_link {
     display: block;
     box-sizing: border-box;
@@ -83,14 +90,14 @@ hr {
     height: 3px;
     top: 100%;
     left: 0;
-    background: #B5B5B5;
+    background: #DFA04F;
     transition: transform 0.5s;
     transform: scaleX(0);
     transform-origin: right;
 }
 
 .header_menu_link:hover {
-    color: #B5B5B5;
+    color: #DFA04F;
 }
 
 .header_menu_link:hover::after {
@@ -105,11 +112,11 @@ hr {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 160px 350px;
+    padding: 160px 180px;
     position: relative;
 }
 
-.section_home::after {
+.section_home::before {
     content: "";
     position: absolute;
     display: block;
@@ -122,13 +129,13 @@ hr {
     z-index: -1;
 }
 
-.section_home::before {
+.section_home::after {
     content: "";
     position: absolute;
     display: block;
     bottom: -80px;
     right: 0px;
-    width: 415px;
+    width: 322px;
     height: 424px;
     background: url(./images/leaf_blue.png) no-repeat center;
     background-size: contain;
@@ -136,19 +143,21 @@ hr {
 }
 
 .section_home_title {
+    width: 70%;
     text-align: center;
     font-size: 60px;
     font-weight: 400;
     margin: 0 0 46px;
     font-family: var(--primary-font);
-    line-height: 1.5em;
+    line-height: 84 px;
 }
 
 .section_home_text {
     font-size: 17px;
     text-align: center;
     margin: 0 0 60px;
-    line-height: 1.5em;
+    line-height: 24px;
+    width: 70%;
 }
 
 .uppercase {
@@ -184,11 +193,14 @@ hr {
     background-color: #EEEEEE;
 }
 
-.section_about_title {
+.title {
     font-family: var(--primary-font);
     font-size: 42px;
+    line-height: 49px;
     font-weight: 500;
-    line-height: 1.5em;
+}
+
+.section_about_title {
     text-align: left;
     align-self: baseline;
     width: 45%;
@@ -204,7 +216,7 @@ hr {
 
 .section_about_text {
     width: 45%;
-    line-height: 1.5em;
+    line-height: 24px;
     margin: 0;
 }
 
@@ -212,31 +224,22 @@ hr {
 
 .section_group-therapy {
     display: flex;
-    width: 100%;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
     background-color: #EEEEEE;
+    padding-right: 180px;
 }
 
 .section_group-therapy_image {
     width: 612px;
     height: 612px;
     background: url(./images/pic_1.png) no-repeat;
+    margin-right: 100px;
 }
 
 .section_group-therapy_text {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 60%;
-    font-family: var(--primary-font);
-    font-size: 42px;
-    line-height: 1.5em;
-}
-
-.section_group-therapy_text p {
-    width: 58%;
-    text-align: left;
+    width: 40%;
+    margin: 0 auto;
 }
 
 /*OUR PROGRAMS*/
@@ -250,13 +253,13 @@ hr {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.section_our-programs_wrapper li {
-    display: inline-block;
+.section_our-programs_wrapper li{
     width: 20%;
 }
-
+ 
 .section_our-programs_title {
     font-family: var(--primary-font);
     font-weight: 400;
@@ -268,7 +271,7 @@ hr {
 .section_our-programs_text {
     font-weight: 300;
     color: #EEEEEE;
-    line-height: 1.5em;
+    line-height: 24px;
 }
 
 /*OUR FOUDER*/
@@ -287,10 +290,6 @@ hr {
 }
 
 .section_our-founder_title {
-    font-family: var(--primary-font);
-    font-weight: 400;
-    font-size: 42px;
-    line-height: 1.4em;
     color: #fff;
     margin: 0 0 46px;
 }
@@ -299,7 +298,7 @@ hr {
     width: 60%;
     font-weight: 300;
     color: #EEEEEE;
-    line-height: 1.7em;
+    line-height: 26px;
 }
 
 cite {
@@ -316,15 +315,26 @@ cite {
 
 .section_contact-us {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 120px 180px 120px 0;
+    justify-content: flex-end;
+    position: relative;
+    padding: 120px 180px 120px;
     background-color: #EEEEEE;
 }
 
+.section_contact-us::before {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 367px;
+    height: 413px;
+    background: #EEEEEE url(./images/leaf_orange.png) no-repeat center;
+    background-size: contain;
+    z-index: 0;
+}
+
 .contact-us_form {
-    width: 55%;
     display: grid;
     grid-column-gap: 10%;
     grid-template-columns: 1fr 1fr;
@@ -333,15 +343,12 @@ cite {
                          "name phone"
                          "time message"
                          "button none";
+    z-index: 1;
 }
 
 .contact-us_form_title {
     grid-area: title;
-    font-family: var(--primary-font);
     width: 80%;
-    font-weight: 400;
-    font-size: 42px;
-    line-height: 1.4em;
     margin: 0 0 46px;
 }
 
@@ -371,7 +378,7 @@ cite {
     color: #1D1D1B;
     opacity: 0.5;
     font-size: 16px;
-    line-height: 1.5em;
+    line-height: 24px;
     cursor: pointer;
 }
 
@@ -472,10 +479,9 @@ cite {
     max-width: 247px;
 }
 
-
 /*FOOTER*/
 
-footer {
+.footer {
     display: flex;
     justify-content: center;
     background: #A6A6A6;
@@ -485,10 +491,7 @@ footer {
     font-weight: 300;
 }
 
-
-
 /*Mobile MENU*/
-
 
 .header .menu-icon {
 	cursor: pointer;
@@ -521,23 +524,18 @@ footer {
 }
   
 .header .menu-icon .navicon:before {
-	top: 10px;
+    top: 10px;
 }
 
 .header .menu-icon .navicon:after {
-	top: -10px;
+    top: -10px;
 }
 
 .header .menu-btn {
-	display: none;
+    display: none;
 }
 
 .header .menu-btn:checked ~ .menu {
-	max-height: 100vh;
-    background: #EEEEEE;
-}
-
-.menu-btn:checked .header {
     background: #EEEEEE;
 }
 
@@ -557,18 +555,53 @@ footer {
 	top: 0;
 }
   
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 750px) and ( max-width: 1024px) {
     .header .menu-icon {
         display: none;
     }
+
+    .header {
+        padding: 24px 50px;
+    }
+
+    .section_home,
+    .section_about,
+    .section_group-therapy,
+    .section_our-programs, 
+    .section_our-founder {
+        padding: 100px 10%;
+    }
+
+    .section_group-therapy {
+        display: block;
+        width: auto;
+    }
+
+    .section_group-therapy_text {
+        width: auto;
+    }
+   
+    .section_our-programs_wrapper {
+        display: block;
+    }
+
+    .section_our-programs_wrapper li {
+        width: auto;
+        margin-bottom: 50px;
+    }
+
 }
     
 @media only screen and (max-width: 750px) {
+    .header .menu-btn:checked ~ .menu {
+        min-height: 80vh;
+    }
+
     .header {
         padding: 50px 0 0;
         display: block;
         text-align: center;
-        background: #fff;
+        background: none;
     }
 
     .header_logo {
@@ -580,6 +613,7 @@ footer {
     .menu {
         width: 100%;
         display: block;
+        z-index: 2;
     }
 
     .header_menu_link {
@@ -610,7 +644,9 @@ footer {
     }
 
     .section_home_title {
+        width: auto;
         font-size: 38px;
+        line-height: 50px;
     }
 
     .section_home_text {
@@ -619,23 +655,36 @@ footer {
     }
 
     .section_home_button {
-        margin-bottom: 200px;
+        margin-bottom: 150px;
     }
 
-    .section_home::after {  
-        display: none; 
-        top: -80px;
-        left: -100px;
-        width: 576px;
-        height: 687px;
+    .section_home::before {
+        top: -200px;
+        width: 360px;
+        height: 360px;
+        z-index: -1;
+    }
+
+    .section_home::after { 
+        transform: rotate(-10deg); 
+        bottom: -36px;
+        left: auto;
+        right: 20px;
+        width: 198px;
+        height: 244px;
     }
     
-    .section_home::before {
-        display: none; 
-        bottom: -80px;
-        right: 0px;
-        width: 415px;
-        height: 424px;
+    
+    .section_home::after { 
+        content: "";
+        display: block;
+        bottom: 0px;
+        left: 0;
+        background: #000;
+        width: 60px;
+        height: 2px;
+        transform: rotate(90deg);
+        position: sticky;
     }
 
     .section_about_title {
@@ -643,10 +692,12 @@ footer {
         font-size: 28px;
         margin: 0 0 26px;
     }
+
     .section_about_text_wrapper {
         flex-direction: column;
         width: auto;
     }
+
     .section_about_text_wrapper .section_about_text:first-child {
         margin-bottom: 16px;
     }
@@ -657,14 +708,10 @@ footer {
         line-height: 24px;
     }
 
-    .section_our-programs_wrapper {
-        flex-direction: column;
-        justify-content: center;
-    }
-
     .section_group-therapy {
         padding-top: 0%;
         padding-left: 0;
+        width: auto;
     }
 
     .section_group-therapy_image {
@@ -681,20 +728,81 @@ footer {
         padding-left: 21px;
     }
 
-    .section_group-therapy_text p {
+    /*OUR PROGRAMS*/
+
+    .section_our-programs_wrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
         width: auto;
     }
 
+    .section_our-programs_wrapper li {
+        display: inline-block;
+        width: auto;
+        margin-bottom: 46px;
+    }
+    
+    .section_our-programs_wrapper li:last-child {
+        margin-bottom: 0px;
+    }
+
+    .section_our-programs_title {
+        font-size: 18px;
+        margin-bottom: 26px;
+    }
+    
+    .section_our-programs_text {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    
+    /*OUR FOUDER*/
+    
+    .section_our-founder {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .section_our-fouder_right {
+        order: 2;
+        width: auto;
+    }
+    
+    .section_our-founder_title {
+        font-size: 28px;
+        line-height: 39px;
+        margin: 0 0 26px;
+    }
+    
+    .section_our-founde_text {
+        width: auto;
+        line-height: 24px;
+    }
+    
     .section_our-founde_img {
-        width: 286px;
+        order: 1;
+        display: inline-block;
+        width: 199px;
         height: 286px;
-        background-size:contain;
-    }
+        background-size: contain;
+        margin-left: auto;
+        padding-right: 19px;
+        margin-bottom: 60px;
+    } 
+    
+    /*CONTACT US*/
 
-    .section_contact-us_img {
-        display: none;
+    .section_contact-us::before {
+        right: 0px;
+        left: auto;
+        bottom: 211px;
+        width: 161px;
+        height: 200px;
+        transform: rotateY(180deg);
     }
-
+    
     .contact-us_form {
         width: 100%;
         display: grid;
@@ -707,5 +815,41 @@ footer {
                              "time"
                              "message"
                              "button";
-    } 
+    }
+    
+    .contact-us_form_title {
+        width: auto;
+        font-size: 28px;
+        line-height: 39px;
+        margin: 0 0 40px;
+    }
+    
+    .contact-us_form .label {
+        display: block;
+        font-family: var(--primary-font);
+        font-weight: 400;
+        font-size: 20px; 
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .contact-us_form_name,
+    .contact-us_form_phone,
+    .contact-us_form_time {
+        margin-bottom: 26px;
+    }
+
+    .contact-us_form_message {
+        margin-bottom: 46px;
+    }
+
+    .contact-us_form_button {
+        max-width: 210px;
+        padding: 20px;
+    }
+
+    .footer {
+        font-size: 14px;
+        padding: 22px 21px;
+    }
 } 
