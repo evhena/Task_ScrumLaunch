@@ -40,22 +40,18 @@ hr {
 
 .menu {
     display: flex;
-    width: 72%;
-    justify-content: space-between;
+    width: 88%;
+    justify-content: flex-end;
     align-items: center;
     text-transform: capitalize;
-    float: left; 
     max-width: 1200px;
     margin: 0;
     padding: 0;
-    clear: both;
-    max-height: 0;
+    max-height: 40px;
     transition: max-height .2s ease-out;
 }
 
-.header ul li {
-    position: relative; 
-}
+
 
 .header_logo {
     font-family: var(--secondary-font);
@@ -64,7 +60,7 @@ hr {
     font-size: 30px;
 }
 
-.header_logo a:hover {
+.header_logo li:hover {
     color: #DFA04F;
     cursor: pointer;
     transition: transform 0.5s;
@@ -80,6 +76,12 @@ hr {
     position: relative;
     color: #000000;
     padding: 10px;
+    line-height: 20px;
+    margin-right: 30px;
+}
+
+.menu li:last-child {
+    margin-right: 0;
 }
 
 .header_menu_link::after {
@@ -95,7 +97,7 @@ hr {
     transform-origin: right;
 }
 
-.header_menu_link:hover {
+.header_menu_link:hover a {
     color: #DFA04F;
 }
 
@@ -421,8 +423,8 @@ cite {
     left: -9999px;
 }
 
-.form_time_checkbox:checked + label, 
-.form_time_checkbox:not(:checked) + label {
+.form_time_checkbox:checked + span, 
+.form_time_checkbox:not(:checked) + span {
     display: inline-block;
     position: relative;
     padding-left: 28px;
@@ -430,8 +432,8 @@ cite {
     cursor: pointer;
 }
 
-.form_time_checkbox:checked + label:before, 
-.form_time_checkbox:not(:checked) + label:before {
+.form_time_checkbox:checked + span:before, 
+.form_time_checkbox:not(:checked) + span:before {
     content: "";
     position: absolute;
     left: 0px;
@@ -443,8 +445,8 @@ cite {
     border-radius: 5px;
 }
 
-.form_time_checkbox:checked + label:after, 
-.form_time_checkbox:not(:checked) + label:after {
+.form_time_checkbox:checked + span:after, 
+.form_time_checkbox:not(:checked) + span:after {
     content: "";
     position: absolute;
     -webkit-transition: all 0.2s ease;
@@ -465,11 +467,11 @@ cite {
     transform: rotate(-45deg);
 }
 
-.form_time_checkbox:not(:checked) + label:after {
+.form_time_checkbox:not(:checked) + span:after {
     opacity: 0;
 }
 
-.form_time_checkbox:checked + label:after {
+.form_time_checkbox:checked + span:after {
     opacity: 1;
 }
 
@@ -556,13 +558,13 @@ cite {
     top: 0;
 }
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 768px) {
     .header .menu-icon {
         display: none;
     }
 }
-  
-@media only screen and (min-width: 750px) and ( max-width: 1024px) {
+
+@media only screen and (min-width: 992px) and ( max-width: 1240px) {
     .header {
         padding: 24px 50px;
     }
@@ -572,7 +574,45 @@ cite {
     }
 
     .header_menu_link {
-        font-size: 16px;
+        font-size: 17px;
+        margin-right: 25px;
+    }
+
+    .section_home,
+    .section_about,
+    .section_group-therapy,
+    .section_our-programs, 
+    .section_our-founder {
+        padding: 100px 10%;
+    }
+
+    .section_group-therapy {
+        display: block;
+        width: auto;
+    }
+
+    .section_group-therapy_text {
+        width: auto;
+    }
+   
+    .section_our-programs_wrapper {
+        display: block;
+    }
+
+    .section_our-programs_wrapper li {
+        width: auto;
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (min-width: 768px) and ( max-width: 991px) {
+    .header {
+        padding: 24px 50px;
+    }
+
+    .header_menu_link {
+        font-size: 15px;
+        margin-right: 5px;
     }
 
     .section_home,
@@ -602,9 +642,11 @@ cite {
     }
 }
     
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 767px) {
     .header .menu-btn:checked ~ .menu {
-        min-height: 82vh;
+        max-height: 100vh;
+        box-sizing: border-box;
+        justify-content: center;
     }
 
     .header {
@@ -627,9 +669,13 @@ cite {
     .menu {
         width: 100%;
         height: 100vh;
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         z-index: 2;
-        padding-top: 150px;
+        padding-top: 25%;
+        max-height: 0;
+        justify-content: end;
     }
 
     .header_menu_link {
@@ -637,6 +683,7 @@ cite {
         text-align: center;
         font-weight: 400;
         font-size: 28px;
+        margin-right: 0;
     }
     
     .header_menu_link::after {

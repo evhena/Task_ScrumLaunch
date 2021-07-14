@@ -22,20 +22,20 @@
             <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
 
             <ul class="menu">
-                <li>
-                    <a class="header_menu_link" href="#section_about">about</a>
+                <li class="header_menu_link">
+                    <a href="#section_about">about</a>
                 </li>
-                <li>
-                    <a class="header_menu_link" href="#section_group-therapy">group therapy</a>
+                <li class="header_menu_link">
+                    <a href="#section_group-therapy">group therapy</a>
                 </li>
-                <li>
-                    <a class="header_menu_link" href="#section_our-programs">our programs</a>
+                <li class="header_menu_link">
+                    <a href="#section_our-programs">our programs</a>
                 </li>
-                <li>
-                    <a class="header_menu_link" href="#section_our-founder">our founder</a>
+                <li class="header_menu_link">
+                    <a href="#section_our-founder">our founder</a>
                 </li>
-                <li>
-                    <a class="header_menu_link" href="#section_contact-us">contact us</a>
+                <li class="header_menu_link">
+                    <a href="#section_contact-us">contact us</a>
                 </li>
             </ul>
     </header>
@@ -137,36 +137,39 @@
                 Email us and we’ll call you back.
             </h2>
 
-            <p class="contact-us_form_name">
-                <label for="full_name" class="label">Name</label>
-                <input type="text" placeholder="Full name" id="full_name" class="input_full_name">
-            </p>
+            <label class="contact-us_form_name">
+                <span class="label">Name</span>
+                <input type="text" placeholder="Full name" class="input_full_name">
+            </label>
 
-            <p class="contact-us_form_phone">
-                <label for="phone" class="label">Phone number</label>
-                <input type="tel" placeholder="Best number to reach you directly" id="phone" class="input_phone">
-            </p>
+            <label class="contact-us_form_phone">
+                <span class="label">Phone number</span>
+                <input type="tel" placeholder="Best number to reach you directly" class="input_phone">
+            </label>
             
             <div class="contact-us_form_time">
-                <span class="label">Best time to reach you</span>
-                <p class="checkbox_wrapper">
-                    <input type="checkbox" id="morning" name="morning" class="form_time_checkbox">
-                    <label for="morning">Morning (9am-noon)</label>
-                </p>
-                <p class="checkbox_wrapper">
-                    <input type="checkbox" id="afternoon" name="afternoon" class="form_time_checkbox">
-                    <label for="afternoon">Afternoon (noon-5pm)</label> 
-                </p>
-                <p class="checkbox_wrapper">
-                    <input type="checkbox" id="evening" name="evening" class="form_time_checkbox">
-                    <label for="evening">Evening (5pm-8pm)</label>   
-                </p>
+                <p class="label">Best time to reach you</p>
+                
+                <label class="checkbox_wrapper">
+                    <input type="checkbox" name="morning" class="form_time_checkbox">
+                    <span>Morning (9am-noon)</span> 
+                </label>
+
+                <label class="checkbox_wrapper">
+                    <input type="checkbox" name="afternoon" class="form_time_checkbox">
+                    <span>Afternoon (noon-5pm)</span>
+                </label> 
+               
+                <label class="checkbox_wrapper">
+                    <input type="checkbox" name="evening" class="form_time_checkbox">
+                    <span>Evening (5pm-8pm)</span>
+                </label>     
             </div>
             
-            <p class="contact-us_form_message">
-                <label for="brief_message" class="label">Brief message</label>
-                <input type="text" id="brief_message" placeholder="Your text here" class="input_message">
-            </p>
+            <label class="contact-us_form_message">
+                <span class="label">Brief message</span>
+                <input type="text" placeholder="Your text here" class="input_message">
+            </label>
 
             <input type="button" value="Begin therapy" class="contact-us_form_button">
         </form>
