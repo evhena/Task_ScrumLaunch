@@ -47,7 +47,7 @@ hr {
     float: left; 
     max-width: 1200px;
     margin: 0;
-	padding: 0;
+    padding: 0;
     clear: both;
     max-height: 0;
     transition: max-height .2s ease-out;
@@ -148,7 +148,7 @@ hr {
     font-weight: 400;
     margin: 0 0 46px;
     font-family: var(--primary-font);
-    line-height: 84 px;
+    line-height: 84px;
 }
 
 .section_home_text {
@@ -176,7 +176,7 @@ hr {
 
 .section_home_button:hover,
 .contact-us_form_button:hover {
-    border: 1px solid #636C92;
+    border: 1px solid;
     border-radius: 30px;
     background-color: #636C92;
     color: #fff;
