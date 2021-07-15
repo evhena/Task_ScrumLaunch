@@ -22,11 +22,10 @@ a {
     color: #10100F;
 }
 
-hr {
-    height: 2px;
-    background-color: #10100F;
-    margin: 0;
-    border: 0;
+.section_home,
+.section_about,
+.section_group-therapy {
+    border-bottom: 2px solid #10100F;
 }
 
 .header {
@@ -288,6 +287,7 @@ hr {
 
 .section_our-fouder_right { 
     width: 50%;
+    margin-right: 50px;
 }
 
 .section_our-founder_title {
@@ -295,8 +295,8 @@ hr {
     margin: 0 0 46px;
 }
 
-.section_our-founde_text {
-    width: 60%;
+.section_our-founder_text {
+    width: 70%;
     font-weight: 300;
     color: #EEEEEE;
     line-height: 26px;
@@ -306,10 +306,11 @@ cite {
     font-style: normal;
 }
 
-.section_our-founde_img {
-    width: 418px;
-    height: 610px;
-    background: url(./images/pic_2.png) no-repeat;
+.section_our-founder_img {
+    width: 40%;
+    height: 665px;
+    background: url(./images/pic_2.png) center no-repeat;
+    background-size: 100%;
 }   
 
 /*CONTACT US*/
@@ -580,21 +581,48 @@ cite {
 
     .section_home,
     .section_about,
-    .section_group-therapy,
-    .section_our-programs, 
-    .section_our-founder {
+    .section_our-programs {
         padding: 100px 10%;
     }
 
+    .section_home_title {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 38px;
+        line-height: 42px;
+    }
+
     .section_group-therapy {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        width: 100%;
+        padding: 0 10% 100px 0;
+    }
+
+    .section_group-therapy_image {
+        margin-bottom: 60px;
+    }
+        
+    .section_group-therapy_text {
+        width: auto;
+        padding-left: 10%;
+    }
+
+    .section_our-founder {
+        padding: 60px 10%;
+    }
+
+    .section_our-founder_text {
         width: auto;
     }
 
-    .section_group-therapy_text {
-        width: auto;
+    .section_our-founder_img {
+        height: 578px;
     }
-   
+
     .section_our-programs_wrapper {
         display: block;
     }
@@ -617,19 +645,47 @@ cite {
 
     .section_home,
     .section_about,
-    .section_group-therapy,
     .section_our-programs, 
     .section_our-founder {
         padding: 100px 10%;
     }
 
+    .section_home_title {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 34px;
+        line-height: 38px;
+    }
+
     .section_group-therapy {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
         width: auto;
+        padding: 0 21px 100px 0;
+    }
+
+    .section_group-therapy_image {
+        margin-bottom: 40px;
     }
 
     .section_group-therapy_text {
         width: auto;
+        padding-left: 10%;
+    }
+
+    .section_our-founder {
+        padding: 40px 10%;
+    }
+
+    .section_our-founder_text {
+        width: auto;
+    }
+
+    .section_our-founder_img {
+        height: 463px;
     }
    
     .section_our-programs_wrapper {
@@ -662,7 +718,7 @@ cite {
         display: inline-block;
         position: absolute;
         top: 30px;
-        left: 150px;
+        left: 21px;
         z-index: 10;
     }
 
@@ -696,7 +752,6 @@ cite {
 
     .section_home, 
     .section_about,
-    .section_group-therapy,
     .section_our-programs,
     .section_our-founder,
     .section_contact-us {
@@ -762,15 +817,16 @@ cite {
     }
 
     .section_group-therapy {
-        padding-top: 0%;
-        padding-left: 0;
+        flex-direction: column;
+        align-items: baseline;
+        padding: 0 21px 60px 0;
         width: auto;
     }
 
     .section_group-therapy_image {
-        width: 286px;
         height: 286px;
         background-size: contain;
+        box-sizing: border-box;
         margin-bottom: 60px;
     }
 
@@ -829,12 +885,12 @@ cite {
         margin: 0 0 26px;
     }
     
-    .section_our-founde_text {
+    .section_our-founder_text {
         width: auto;
         line-height: 24px;
     }
     
-    .section_our-founde_img {
+    .section_our-founder_img {
         order: 1;
         display: inline-block;
         width: 199px;
